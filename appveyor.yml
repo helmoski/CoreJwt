@@ -25,4 +25,4 @@ deploy:
   artifact: src/CoreJwt/bin/Release/*.nupkg
   on: 
     branch: master
-	appveyor_repo_tag: true
+    appveyor_repo_tag: true

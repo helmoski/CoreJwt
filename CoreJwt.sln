@@ -8,16 +8,17 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0E0E05CE-8F64-4612-ABD7-8C7CE444ED6B}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+		appveyor.yml = appveyor.yml
 		global.json = global.json
 		LICENSE.txt = LICENSE.txt
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "CoreJWT", "src\CoreJwt\CoreJwt.xproj", "{23FB2836-F34E-4CAF-9E6D-1B11661A558A}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "CoreJwt", "src\CoreJwt\CoreJwt.xproj", "{23FB2836-F34E-4CAF-9E6D-1B11661A558A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{7C389788-7E0D-4CAC-9589-85E16FD6E569}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "CoreJWT.test", "test\CoreJwt.test\CoreJwt.test.xproj", "{601A3A10-F124-4CA6-8B1E-47CECEC35E35}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "CoreJwt.test", "test\CoreJwt.test\CoreJwt.test.xproj", "{601A3A10-F124-4CA6-8B1E-47CECEC35E35}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

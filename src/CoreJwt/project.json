@@ -19,6 +19,6 @@
   "dependencies": {
     "Microsoft.AspNet.Cryptography.KeyDerivation": "1.0.0-rc1-final",
     "Newtonsoft.Json": "8.0.2",
-    "System.Collections": "4.0.11-rc2-23704"
+    "Microsoft.CSharp": "4.0.1-beta-23516"
   }
 }

@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A269CD7D-DB1B-4D1A-8852-82ACCE8FD527}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0E0E05CE-8F64-4612-ABD7-8C7CE444ED6B}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		global.json = global.json
+		LICENSE.txt = LICENSE.txt
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "CoreJWT", "src\CoreJwt\CoreJwt.xproj", "{23FB2836-F34E-4CAF-9E6D-1B11661A558A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{7C389788-7E0D-4CAC-9589-85E16FD6E569}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "CoreJWT.test", "test\CoreJwt.test\CoreJwt.test.xproj", "{601A3A10-F124-4CA6-8B1E-47CECEC35E35}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{23FB2836-F34E-4CAF-9E6D-1B11661A558A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23FB2836-F34E-4CAF-9E6D-1B11661A558A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23FB2836-F34E-4CAF-9E6D-1B11661A558A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23FB2836-F34E-4CAF-9E6D-1B11661A558A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{601A3A10-F124-4CA6-8B1E-47CECEC35E35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{601A3A10-F124-4CA6-8B1E-47CECEC35E35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{601A3A10-F124-4CA6-8B1E-47CECEC35E35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{601A3A10-F124-4CA6-8B1E-47CECEC35E35}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{23FB2836-F34E-4CAF-9E6D-1B11661A558A} = {A269CD7D-DB1B-4D1A-8852-82ACCE8FD527}
+		{601A3A10-F124-4CA6-8B1E-47CECEC35E35} = {7C389788-7E0D-4CAC-9589-85E16FD6E569}
+	EndGlobalSection
+EndGlobal

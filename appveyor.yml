@@ -1,0 +1,8 @@
+os: Visual Studio 2015
+install:
+  - set PATH=C:\Program Files\MSBuild\14.0\Bin;%PATH%
+  - dnvm upgrade -r coreclr -arch x64 1.0.0-rc1-update1
+  - dnvm use -r coreclr -arch x64 1.0.0-rc1-update1
+  - dnu restore
+build:
+  verbosity: minimal

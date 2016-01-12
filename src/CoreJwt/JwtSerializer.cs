@@ -21,6 +21,7 @@ namespace CoreJwt
             }
             set
             {
+                _algorithm = value;
                 if(value == JwtHashAlgorithm.HMACSHA256)
                 {
                     _prf = KeyDerivationPrf.HMACSHA256;
@@ -47,8 +48,6 @@ namespace CoreJwt
 
         public string Serialize(Dictionary<string, string> payload)
         {
-            VerifySerializePayload(payload);
-
             var header = new Dictionary<string, string>()
             {
                 {"typ", "JWT"},
@@ -78,7 +77,6 @@ namespace CoreJwt
                 throw new TamperingException();
             }
 
-
             var signature = Decode(parts[2]);
             var encodedPayload = parts[1];
             
@@ -92,8 +90,6 @@ namespace CoreJwt
 
             var payloadJson = Decode(encodedPayload);
             var payload = JsonConvert.DeserializeObject<Dictionary<string, string>>(payloadJson);
-
-            VerifyDeserializePayload(payload);
 
             return payload;
         }
@@ -116,44 +112,6 @@ namespace CoreJwt
             catch (FormatException)
             {
                 throw new TamperingException();
-            }
-        }
-
-        private void VerifySerializePayload(Dictionary<string, string> payload) 
-        {
-            if(payload.ContainsKey("exp"))
-            {
-                var exp = payload["exp"];
-                DateTime expires;
-                try
-                {
-                    expires = DateTime.Parse(exp);
-                }
-                catch (FormatException)
-                {
-                    throw new ArgumentException("Expiration must be a valid timestamp.");
-                }
-            }
-        }
-
-        private void VerifyDeserializePayload(Dictionary<string, string> payload)
-        {
-            if (payload.ContainsKey("exp"))
-            {
-                var exp = payload["exp"];
-                DateTime expires;
-                try
-                {
-                    expires = DateTime.Parse(exp);
-                }
-                catch (FormatException)
-                {
-                    throw new ArgumentException("Expiration must be a valid timestamp.");
-                }
-                if (DateTime.Now >= expires)
-                {
-                    throw new ExpiredException();
-                }
             }
         }
     }

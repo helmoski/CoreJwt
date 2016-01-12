@@ -78,48 +78,6 @@ namespace JWT.test
         }
 
         [Fact]
-        public void NotExpired()
-        {
-            var serializer = new JwtSerializer(JwtHashAlgorithm.HMACSHA512, 2, SALT);
-            var payload = new Dictionary<string, string>()
-            {
-                {"exp", DateTime.Now.AddSeconds(10).ToString()}
-            };
-
-            var jwt = serializer.Serialize(payload);
-
-            payload = serializer.Deserialize(jwt);
-        }
-
-        [Fact]
-        public void ExpiredJwtThrowsExpiredException()
-        {
-            var serializer = new JwtSerializer(JwtHashAlgorithm.HMACSHA512, 2, SALT);
-            var payload = new Dictionary<string, string>()
-            {
-                {"exp", DateTime.Now.AddSeconds(-10).ToString()}
-            };
-
-            var jwt = serializer.Serialize(payload);
-
-            var e = Assert.Throws<ExpiredException>(() => serializer.Deserialize(jwt));
-            Assert.Equal("JWT has expired.", e.Message);
-        }
-
-        [Fact]
-        public void InvalidExpirationThrowsArgumentException()
-        {
-            var serializer = new JwtSerializer(JwtHashAlgorithm.HMACSHA512, 2, SALT);
-            var payload = new Dictionary<string, string>()
-            {
-                {"exp", "Not a timestamp"}
-            };
-
-            var e = Assert.Throws<ArgumentException>(() => serializer.Serialize(payload));
-            Assert.Equal("Expiration must be a valid timestamp.", e.Message);
-        }
-
-        [Fact]
         public void TamperingCausesTamperingException()
         {
             var serializer = new JwtSerializer(JwtHashAlgorithm.HMACSHA512, 2, SALT);

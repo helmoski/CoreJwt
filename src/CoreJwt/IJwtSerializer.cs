@@ -14,7 +14,6 @@ namespace CoreJwt
         /// </summary>
         /// <param name="payload">Payload for the JWT</param>
         /// <returns>JWT</returns>
-        /// <exception cref="ArgumentException">Expiration is not a timestamp.</exception>
         string Serialize(Dictionary<string, string> payload);
 
         /// <summary>
@@ -23,7 +22,6 @@ namespace CoreJwt
         /// <param name="jwt">JSON web token</param>
         /// <returns>Payload</returns>
         /// <exception cref="TamperingException">JWT shows signs of tampering</exception>
-        /// <exception cref="ExpiredException">JWT has expired</exception>
         Dictionary<string, string> Deserialize(string jwt);
     }
 }

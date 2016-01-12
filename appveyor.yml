@@ -6,3 +6,8 @@ install:
   - dnu restore
 build:
   verbosity: minimal
+test: off
+test_script:
+  - cd test/CoreJwt.test
+  - dnx test
+  - cd ../..

@@ -1,5 +1,5 @@
 {
-  "version": "1.0.3",
+  "version": "1.0.2",
   "description": "JWT implementation for .NET core",
   "authors": [ "Ryan Helmoski" ],
   "tags": [

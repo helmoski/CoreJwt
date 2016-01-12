@@ -3,7 +3,7 @@
     "dnxcore50": { }
   },
   "dependencies": {
-    "CoreJwt": "1.0.0",
+    "CoreJwt": "1.0.3",
     "Microsoft.CSharp": "4.0.1-beta-23516",
     "xunit": "2.1.0",
     "xunit.runner.dnx": "2.1.0-rc1-build204"

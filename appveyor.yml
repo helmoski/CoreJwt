@@ -22,7 +22,6 @@ deploy:
   api_key: 
     secure: cKw8uYyXfNxiKR6S+3J3pD3H+KOlGzSWJwpQIUnjqMNlLDTdnFqplvAW6T4drALY+I9ddo73i5LHscXLuKetXHaI/NJcrrDbwiLA1NpGcEc=
   skip_symbols: true
-  artifact: src/CoreJwt/bin/Release/*.nupkg
   on: 
     branch: master
     appveyor_repo_tag: true
